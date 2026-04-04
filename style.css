@@ -1,0 +1,69 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Game Board */
+#board {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border: 2px solid white;
+
+    background: url("assets/image.png") center/cover no-repeat;
+}
+
+/* Score */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Player Jet */
+#jet {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 200px;
+    height: 200px;
+
+    background: url("assets/playership.png") no-repeat center;
+    background-size: contain;
+}
+
+/* Enemy Ships */
+.rocks {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 200px;
+    height: 200px;
+
+    background: url("assets/enemyship1.png") no-repeat center;
+    background-size: contain;
+
+    transform: rotate(180deg);
+}
+
+/* Bullets */
+.bullet {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+
+    background: url("assets/bullet.png") no-repeat center;
+    background-size: contain;
+}
