@@ -106,7 +106,7 @@ function spawnEnemy() {
 
 setInterval(spawnEnemy, spawnRate);
 
-/* ------------------ MOVE ENEMIES ------------------ */
+// move enemies
 setInterval(() => {
     if (gamePaused || gameOver) return;
 
@@ -115,7 +115,7 @@ setInterval(() => {
 
         r.style.left = (left - enemySpeed) + "px";
 
-        // 💀 GAME OVER ZONE
+        // game over
         if (left <= 200) {
             endGame();
         }
@@ -124,7 +124,7 @@ setInterval(() => {
     });
 }, 40);
 
-/* ------------------ COLLISION (KILL-BASED SCORE) ------------------ */
+// Collision logic
 setInterval(() => {
     if (gamePaused || gameOver) return;
 
@@ -150,7 +150,7 @@ setInterval(() => {
 
                 r.style.opacity = health / 5;
 
-                // 🎯 SCORE ON KILL
+                // scoring
                 if (health <= 0) {
                     r.remove();
 
