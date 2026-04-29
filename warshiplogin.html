@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WARHSHIP — Fleet Battle System</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <img id="bg-image" src="assets/Warship.jpeg" alt="Background">
+
+  <nav class="top-nav">
+    <div class="nav-logo">WARHSHIP</div>
+    <div class="nav-links">
+      <button onclick="switchPage('login-page')" class="active" id="nav-login">Login</button>
+      <button onclick="window.location.href='game.html'" id="nav-game">Deploy (Game)</button>
+      <button onclick="switchPage('controls-page')" id="nav-controls">Controls</button>
+      <button onclick="switchPage('leaderboard-page')" id="nav-leaderboard">Leaderboard</button>
+    </div>
+  </nav>
+
+  <div class="screen">
+
+    <section id="login-page" class="page-section active-page">
+      <div class="logo-wrap">
+        <div class="logo">WARHSHIP</div>
+        <div class="logo-sub">Fleet Battle System</div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title"><span>// </span>CREW AUTHENTICATION<span> //</span></div>
+
+        <div class="field">
+          <label>Commander ID</label>
+          <input type="text" id="username" placeholder="Enter your callsign" autocomplete="off"/>
+        </div>
+
+        <div class="field">
+          <label>Access Code</label>
+          <input type="password" id="password" placeholder="••••••••••" autocomplete="off"/>
+        </div>
+
+        <button class="btn-primary" id="loginBtn"><span>⚡ LOGIN</span></button>
+      </div>
+    </section>
+
+    <section id="game-page" class="page-section">
+      <div class="panel game-container">
+        <div class="panel-title"><span>// </span>COMBAT ZONE<span> //</span></div>
+        <p>Game canvas or grid goes here...</p>
+      </div>
+    </section>
+
+    <section id="controls-page" class="page-section">
+      <div class="panel">
+        <div class="panel-title"><span>// </span>SHIP CONTROLS<span> //</span></div>
+        <ul class="controls-list">
+          <li><strong>↑</strong> : Move </li>
+          <li><strong>↓</strong> : Reverse / Brake</li>
+          <li><strong>SPACE</strong> : Fire Main Battery</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="leaderboard-page" class="page-section">
+      <div class="panel">
+        <div class="panel-title"><span>// </span>TOP COMMANDERS<span> //</span></div>
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Callsign</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>MARAAR THE GREAT</td><td>9,420</td></tr>
+            <tr><td>2</td><td>AKPA</td><td>8,105</td></tr>
+            <tr><td>3</td><td>AJUL</td><td>7,890</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <div id="toast">⚠ NOTIFICATION</div>
+
+  <script src="login.js"></script>
+</body>
+</html>
