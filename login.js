@@ -68,7 +68,7 @@ function handleLogin() {
     
     // Automatically switch to the Game page after successful login
     setTimeout(() => {
-        window.location.href='spaceshooter.html';
+        window.location.href='game.html';
     });
 
   }, 1200);
